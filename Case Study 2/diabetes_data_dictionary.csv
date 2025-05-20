@@ -1,0 +1,51 @@
+Feature,Description,Type / Possible Values
+encounter_id,Unique identifier for the hospital encounter,Integer
+patient_nbr,Unique identifier for the patient,Integer
+race,Patient's race,"Categorical (e.g., Caucasian, AfricanAmerican, Asian, Hispanic, Other, Unknown)"
+gender,Patient's gender,"Categorical (Male, Female, Unknown/Invalid)"
+age,Age group of the patient,"Categorical ([0-10), [10-20), ..., [90-100))"
+weight,Patient weight,"Categorical (e.g., [75-100), >200, ? for missing)"
+admission_type_id,Type of hospital admission,"Integer (e.g., 1 = Emergency, 2 = Urgent, 3 = Elective)"
+discharge_disposition_id,Discharge status,"Integer (e.g., 1 = Discharged to home, 2 = Another hospital, 11 = Died)"
+admission_source_id,Admission source,"Integer (e.g., 1 = Physician referral, 7 = Emergency room)"
+time_in_hospital,Length of stay in hospital (days),Integer
+payer_code,Primary payment source,"Categorical (e.g., MC, MD, HM, UN, ? for missing)"
+medical_specialty,Medical specialty of admitting physician,"Categorical (e.g., Cardiology, InternalMedicine, ?)"
+num_lab_procedures,Number of lab tests performed,Integer
+num_procedures,Number of procedures (non-lab) performed,Integer
+num_medications,Number of medications prescribed,Integer
+number_outpatient,Number of outpatient visits in the year,Integer
+number_emergency,Number of emergency visits in the year,Integer
+number_inpatient,Number of inpatient visits in the year,Integer
+diag_1,Primary diagnosis code (ICD-9),"Categorical (e.g., 250.83 for diabetes)"
+diag_2,Secondary diagnosis code,Categorical
+diag_3,Additional diagnosis code,Categorical
+number_diagnoses,Number of diagnoses reported,Integer
+max_glu_serum,Max glucose serum test result,"Categorical (None, Norm, >200, >300)"
+A1Cresult,Hemoglobin A1C test result,"Categorical (None, Norm, >7, >8)"
+metformin,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+repaglinide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+nateglinide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+chlorpropamide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glimepiride,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+acetohexamide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glipizide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glyburide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+tolbutamide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+pioglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+rosiglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+acarbose,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+miglitol,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+troglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+tolazamide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+examide,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+citoglipton,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+insulin,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glyburide-metformin,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glipizide-metformin,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+glimepiride-pioglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+metformin-rosiglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+metformin-pioglitazone,Diabetes medication prescribed and its status,"Categorical (No, Steady, Up, Down)"
+change,Whether there was a change in medication,"Categorical (Ch, No)"
+diabetesMed,Whether diabetes medication was prescribed,"Categorical (Yes, No)"
+readmitted,Whether patient was readmitted,"Categorical (<30, >30, NO)"
