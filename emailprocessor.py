@@ -305,7 +305,7 @@ class EmailProcessor:
 
         return analysis
 
-# Example usage and testing
+# synthetic email data provided by claude for testing examples.
 def demonstrate_email_processing():
     """Demonstrate email processing with examples"""
 
@@ -436,52 +436,8 @@ def process_real_email_file(file_path: str):
         print(f"Error processing {file_path}: {e}")
         return None
 
-# Integration with spam filter
-def integrate_with_spam_filter():
-    """Show how to integrate email processing with spam filtering"""
 
-    print("\n=== INTEGRATION WITH SPAM FILTER ===")
-
-    processor = EmailProcessor()
-
-    # Example of processing multiple emails for spam filtering
-    def process_email_dataset(email_files: List[str]) -> List[Dict]:
-        """Process multiple emails and prepare for spam filtering"""
-
-        processed_emails = []
-
-        for file_path in email_files:
-            try:
-                # Parse email
-                msg = processor.parse_email_from_file(file_path)
-
-                # Extract clean text
-                clean_text = processor.process_email(msg)
-
-                # Determine label from file path (for SpamAssassin dataset)
-                label = 1 if 'spam' in file_path else 0
-
-                processed_emails.append({
-                    'file_path': file_path,
-                    'text': clean_text,
-                    'label': label,
-                    'is_multipart': msg.is_multipart(),
-                    'content_type': msg.get_content_type()
-                })
-
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
-                continue
-
-        return processed_emails
-
-    print("Use process_email_dataset() to prepare emails for spam filtering")
-    print("The cleaned text will be much better for machine learning models!")
-
-if __name__ == "__main__":
-    # Run demonstrations
     demonstrate_email_processing()
-    integrate_with_spam_filter()
 
     print("\n=== SUMMARY ===")
     print("Email processing handles:")
